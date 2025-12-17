@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>统计分析结果</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>统计分析结果</h1>
+        <p th:text="${filename}"></p>
+    </div>
+
+    <div class="content">
+        <div class="result-info">
+            <strong>上传文件：</strong><span th:text="${filename}"></span>
+        </div>
+
+        <pre th:text="${report}"></pre>
+
+        <div class="buttons">
+            <a th:href="@{/download(report=${rawReport})}" class="btn download">下载 Word 报告 (.docx)</a>
+            <a href="/" class="btn back">重新上传文件</a>
+        </div>
+
+        <div class="template-link" style="margin-top: 40px;">
+            <a th:href="@{/template.xlsx}">下载 Excel 模板</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* src/main/resources/static/css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(120deg, #007bff, #0056b3);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.content {
+    padding: 40px 50px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px dashed #007bff;
+    border-radius: 10px;
+    background: #f8f9fa;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input[type="file"]:hover {
+    border-color: #0056b3;
+    background: #eef2ff;
+}
+
+button, .btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    margin-right: 10px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.btn.download {
+    background: #28a745;
+    color: white;
+}
+
+.btn.download:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.btn.back {
+    background: #6c757d;
+    color: white;
+}
+
+.btn.back:hover {
+    background: #545b62;
+}
+
+.template-link {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+.template-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.template-link a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #f5c6cb;
+}
+
+.result-info {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    color: #495057;
+}
+
+pre {
+    background: #f1f3f5;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 5px solid #007bff;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    .content {
+        padding: 30px;
+    }
+    button, .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

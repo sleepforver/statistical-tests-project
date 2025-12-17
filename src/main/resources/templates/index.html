@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实验数据统计检验工具</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>实验数据统计检验工具</h1>
+        <p>支持独立样本 t 检验 & 卡方独立性检验</p>
+    </div>
+
+    <div class="content">
+        <div th:if="${error}" class="error" th:text="${error}"></div>
+
+        <form method="post" action="/upload" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">请选择 Excel 文件（.xlsx）</label>
+                <input type="file" id="file" name="file" accept=".xlsx,.xls" required />
+            </div>
+
+            <button type="submit">开始分析</button>
+        </form>
+
+        <div class="template-link">
+            <p>首次使用？<a th:href="@{/template.xlsx}">下载 Excel 数据模板</a>（请严格按照模板填写）</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
